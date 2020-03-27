@@ -13,9 +13,9 @@ import './msgbox.css'
         callback: function() {}
     }
 
-    msgbox._timer = null;
+    window.msgbox._timer = null;
 
-    msgbox.show = function(opts) {
+    window.msgbox.show = function(opts) {
 
         //设置参数值
         if (typeof(opts) != 'object') {
@@ -80,7 +80,7 @@ import './msgbox.css'
 
     };
 
-    msgbox.hide = function(callback) {
+    window.msgbox.hide = function(callback) {
         var _s = window.msgbox;
         clearTimeout(_s._timer);
         if (typeof callback == 'function') {
